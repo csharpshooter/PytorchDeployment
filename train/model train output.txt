@@ -1,0 +1,91 @@
+(EMLO) abhijitm@ABPC:/mnt/d/Development/TSAI/EMLO/PytorchDeployment/train$ python train.py
+__Python VERSION: 3.8.11 (default, Aug  3 2021, 15:09:35)
+[GCC 7.5.0]
+__pyTorch VERSION: 1.9.1
+__CUDA VERSION
+__CUDNN VERSION: 8005
+__Number CUDA Devices: 2
+__Devices
+index, name, driver_version, memory.total [MiB], memory.used [MiB], memory.free [MiB]
+0, NVIDIA GeForce GTX 1070, 510.06, 8192 MiB, 709 MiB, 7483 MiB
+1, NVIDIA GeForce RTX 2080 SUPER, 510.06, 8192 MiB, 324 MiB, 7868 MiB
+Active CUDA Device: GPU 0
+Available devices  2
+Current cuda device  0
+1.9.1
+Files already downloaded and verified
+Files already downloaded and verified
+EPOCH: 0
+  0%|                                                                                           | 0/782 [00:00<?, ?it/s]/home/abhijitm/anaconda3/envs/EMLO/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+Loss=1.4328275918960571 Batch_id=781 Accuracy=54.71: 100%|████████████████████████████| 782/782 [00:40<00:00, 19.24it/s]
+
+Test set: Average loss: 0.0140, Accuracy: 6937/10000 (69.37%)
+
+Validation accuracy increased (0.000000 --> 69.370000).  Saving model ...
+EPOCH: 1
+Loss=1.1091197729110718 Batch_id=781 Accuracy=69.92: 100%|████████████████████████████| 782/782 [00:43<00:00, 17.94it/s]
+
+Test set: Average loss: 0.0112, Accuracy: 7474/10000 (74.74%)
+
+Validation accuracy increased (69.370000 --> 74.740000).  Saving model ...
+EPOCH: 2
+Loss=0.9234709143638611 Batch_id=781 Accuracy=74.14: 100%|████████████████████████████| 782/782 [00:48<00:00, 16.05it/s]
+
+Test set: Average loss: 0.0104, Accuracy: 7682/10000 (76.82%)
+
+Validation accuracy increased (74.740000 --> 76.820000).  Saving model ...
+EPOCH: 3
+Loss=0.3309362530708313 Batch_id=781 Accuracy=76.71: 100%|████████████████████████████| 782/782 [00:47<00:00, 16.33it/s]
+
+Test set: Average loss: 0.0096, Accuracy: 7889/10000 (78.89%)
+
+Validation accuracy increased (76.820000 --> 78.890000).  Saving model ...
+EPOCH: 4
+Loss=0.34525030851364136 Batch_id=781 Accuracy=78.15: 100%|███████████████████████████| 782/782 [00:43<00:00, 17.94it/s]
+
+Test set: Average loss: 0.0090, Accuracy: 8032/10000 (80.32%)
+
+Validation accuracy increased (78.890000 --> 80.320000).  Saving model ...
+EPOCH: 5
+Loss=1.228015661239624 Batch_id=781 Accuracy=79.60: 100%|█████████████████████████████| 782/782 [00:45<00:00, 17.11it/s]
+
+Test set: Average loss: 0.0088, Accuracy: 8063/10000 (80.63%)
+
+Validation accuracy increased (80.320000 --> 80.630000).  Saving model ...
+EPOCH: 6
+Loss=0.8972939252853394 Batch_id=781 Accuracy=80.71: 100%|████████████████████████████| 782/782 [00:45<00:00, 17.35it/s]
+
+Test set: Average loss: 0.0088, Accuracy: 8052/10000 (80.52%)
+
+EPOCH: 7
+Loss=0.8754922151565552 Batch_id=781 Accuracy=81.65: 100%|████████████████████████████| 782/782 [00:46<00:00, 16.79it/s]
+
+Test set: Average loss: 0.0080, Accuracy: 8217/10000 (82.17%)
+
+Validation accuracy increased (80.630000 --> 82.170000).  Saving model ...
+EPOCH: 8
+Loss=0.9471492767333984 Batch_id=781 Accuracy=82.48: 100%|████████████████████████████| 782/782 [00:49<00:00, 15.73it/s]
+
+Test set: Average loss: 0.0080, Accuracy: 8234/10000 (82.34%)
+
+Validation accuracy increased (82.170000 --> 82.340000).  Saving model ...
+EPOCH: 9
+Loss=0.5595234632492065 Batch_id=781 Accuracy=83.08: 100%|████████████████████████████| 782/782 [00:50<00:00, 15.54it/s]
+
+Test set: Average loss: 0.0083, Accuracy: 8197/10000 (81.97%)
+
+Finished Training
+Loading Saved Model
+Loading Completed
+Accuracy on the test images: 81 %
+Accuracy for class plane is: 87.5 %
+Accuracy for class car   is: 89.2 %
+Accuracy for class bird  is: 80.2 %
+Accuracy for class cat   is: 64.2 %
+Accuracy for class deer  is: 84.2 %
+Accuracy for class dog   is: 70.9 %
+Accuracy for class frog  is: 89.5 %
+Accuracy for class horse is: 85.9 %
+Accuracy for class ship  is: 82.5 %
+Accuracy for class truck is: 85.6 %
