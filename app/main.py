@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect
 import traceback,sys,os
 
 from app.torch_utils import transform_image, get_prediction
