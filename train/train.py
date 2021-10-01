@@ -219,7 +219,7 @@ def test(model, device, test_loader, class_correct, class_total, epoch, t_acc_ma
     return t_acc, t_acc_max, test_loss
 
 
-optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+optimizer = optim.SGD(net.parameters(), lr=0.01, momentum=0.9)
 epochs = 10
 
 for epoch in range(epochs):
