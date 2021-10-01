@@ -4,7 +4,7 @@ import torch.nn as nn
 import torchvision.transforms as transforms 
 from PIL import Image
 import torchvision.models as models
-from resnet import ResNet18
+from app.resnet import ResNet18
 
 num_classes = 10
 
@@ -36,9 +36,10 @@ def transform_image(image_bytes):
     
 def get_prediction(image_tensor):
 # move the input and model to GPU for speed if available
+    input_batch = image_tensor
     if torch.cuda.is_available():
         input_batch = image_tensor.to('cuda')
-        model.to('cuda')
+        model.to('cuda')   
 
     with torch.no_grad():
         output = model(input_batch)     
