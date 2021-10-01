@@ -18,12 +18,6 @@ model.load_state_dict(torch.load(PATH,map_location ='cpu'))
 model.eval()
 
 def transform_image(image_bytes):
-#     transform = transforms.Compose([
-#     transforms.Resize(32),
-#     transforms.CenterCrop(32),
-#     transforms.ToTensor(),
-#     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-# ])
 
     transform = transforms.Compose([transforms.Resize((32, 32)), 
     transforms.ToTensor(),
@@ -47,7 +41,9 @@ def get_prediction(image_tensor):
     # print(probabilities)
     _, predictions = torch.max(output, 1)
     # predicted_idx = predictions.item()
-    print(predictions.item())
-    print(predictions.item())
-    result = {'predicted class id': predictions.item(), 'predicted class': str(classes[predictions.item()])}
-    return result
+    #print(predictions.item())
+    #print(predictions.item())
+    class_id = predictions.item()
+    class_name = str(classes[predictions.item()])
+    #result = {'predicted class id': predictions.item(), 'predicted class': str(classes[predictions.item()])}
+    return class_id, class_name
