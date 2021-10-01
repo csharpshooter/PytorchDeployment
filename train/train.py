@@ -13,6 +13,8 @@ from csv_logger import CsvLogger
 import logging
 import sys
 
+from resnet import ResNet18
+
 print('__Python VERSION:', sys.version)
 print('__pyTorch VERSION:', torch.__version__)
 print('__CUDA VERSION')
@@ -51,11 +53,13 @@ print(torch.__version__)
 
 batch_size = 64
 
-classes = ('plane', 'car', 'bird', 'cat', 'deer',
-           'dog', 'frog', 'horse', 'ship', 'truck')
+
+
+classes = ['airplane', 'automobile', 'bird', 'cat', 'deer',
+           'dog', 'frog', 'horse', 'ship', 'truck']
 
 transform_train = transforms.Compose([
-    transforms.RandomCrop(32, padding=4),
+    transforms.RandomCrop(32),
     transforms.RandomHorizontalFlip(),
     transforms.ToTensor(),
     transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
@@ -101,9 +105,12 @@ images, labels = dataiter.next()
 dataiter = iter(trainloader)
 images, labels = dataiter.next()
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-net = models.resnet18(pretrained=True).to(device)
+use_cuda = torch.cuda.is_available()
+device = torch.device("cuda:0" if use_cuda else "cpu")
+print(device)
+net = ResNet18().to(device)
 
 criterion = nn.CrossEntropyLoss()
 
@@ -235,7 +242,9 @@ images, labels = dataiter.next()
 print('Loading Saved Model')
 
 # net = models.resnet18(pretrained=False).to(device)
-# net.load_state_dict(torch.load(PATH))
+
+net = ResNet18().to(device)
+net.load_state_dict(torch.load(PATH))
 
 print('Loading Completed')
 images = images.to(device)
