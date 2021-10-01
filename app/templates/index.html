@@ -27,9 +27,10 @@
 		<img class="mb-4" src="/static/EMLO.png" alt="" width="100">
 		<img class="mb-4" src="/static/cifar-10.png" alt="" width="100">
         <h1 class="h3 mb-3 font-weight-normal">Upload any image</h1>
+		<img class="mb-4" src="" id="output" alt="" width="300">
         <input type="file" name="file" class="form-control-file" id="inputfile">
         <br/>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
         <p class="mt-5 mb-3 text-muted">Built using Pytorch, Flask, Heroku, Bootstrap</p>
     </form>
     <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -41,14 +42,11 @@
           if (fileSize > 1) {
             $("#inputfile").val(null);
             alert('file is too big. images more than 1MB are not allowed')
-            return
+            return		  
           }
-
-          <!-- let ext = $('#inputfile').val().split('.').pop().toLowerCase(); -->
-          <!-- if($.inArray(ext, ['jpg','jpeg']) == -1) { -->
-            <!-- $("#inputfile").val(null); -->
-            <!-- alert('only jpeg/jpg files are allowed!'); -->
-          <!-- } -->
+		  
+		  var image = document.getElementById('output');
+		  image.src = URL.createObjectURL(this.files[0]);
       });
     </script>
     <!-- Github Ribbon Start-->
