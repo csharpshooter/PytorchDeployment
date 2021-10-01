@@ -7,8 +7,8 @@ __CUDNN VERSION: 8005
 __Number CUDA Devices: 2
 __Devices
 index, name, driver_version, memory.total [MiB], memory.used [MiB], memory.free [MiB]
-0, NVIDIA GeForce GTX 1070, 510.06, 8192 MiB, 513 MiB, 7679 MiB
-1, NVIDIA GeForce RTX 2080 SUPER, 510.06, 8192 MiB, 362 MiB, 7830 MiB
+0, NVIDIA GeForce GTX 1070, 510.06, 8192 MiB, 900 MiB, 7292 MiB
+1, NVIDIA GeForce RTX 2080 SUPER, 510.06, 8192 MiB, 431 MiB, 7761 MiB
 Active CUDA Device: GPU 0
 Available devices  2
 Current cuda device  0
@@ -19,74 +19,129 @@ cuda:0
 EPOCH: 0
   0%|                                                                                           | 0/782 [00:00<?, ?it/s]/home/abhijitm/anaconda3/envs/EMLO/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
   warnings.warn(warning.format(ret))
-Loss=1.209693431854248 Batch_id=781 Accuracy=50.92: 100%|█████████████████████████████| 782/782 [01:02<00:00, 12.59it/s]
+Loss=1.6950644254684448 Batch_id=781 Accuracy=41.76: 100%|████████████████████████████| 782/782 [01:02<00:00, 12.46it/s]
 
-Test set: Average loss: 0.0164, Accuracy: 6197/10000 (61.97%)
+Test set: Average loss: 0.0202, Accuracy: 5374/10000 (53.74%)
 
-Validation accuracy increased (0.000000 --> 61.970000).  Saving model ...
+Validation accuracy increased (0.000000 --> 53.740000).  Saving model ...
 EPOCH: 1
-Loss=0.760765016078949 Batch_id=781 Accuracy=68.69: 100%|█████████████████████████████| 782/782 [00:59<00:00, 13.19it/s]
+Loss=1.205397605895996 Batch_id=781 Accuracy=57.44: 100%|█████████████████████████████| 782/782 [01:02<00:00, 12.53it/s]
 
-Test set: Average loss: 0.0145, Accuracy: 6735/10000 (67.35%)
+Test set: Average loss: 0.0168, Accuracy: 6153/10000 (61.53%)
 
-Validation accuracy increased (61.970000 --> 67.350000).  Saving model ...
+Validation accuracy increased (53.740000 --> 61.530000).  Saving model ...
 EPOCH: 2
-Loss=0.7559112310409546 Batch_id=781 Accuracy=76.06: 100%|████████████████████████████| 782/782 [00:58<00:00, 13.27it/s]
+Loss=0.9689051508903503 Batch_id=781 Accuracy=64.57: 100%|████████████████████████████| 782/782 [01:01<00:00, 12.72it/s]
 
-Test set: Average loss: 0.0108, Accuracy: 7567/10000 (75.67%)
+Test set: Average loss: 0.0135, Accuracy: 6980/10000 (69.80%)
 
-Validation accuracy increased (67.350000 --> 75.670000).  Saving model ...
+Validation accuracy increased (61.530000 --> 69.800000).  Saving model ...
 EPOCH: 3
-Loss=0.5713993310928345 Batch_id=781 Accuracy=80.86: 100%|████████████████████████████| 782/782 [00:57<00:00, 13.52it/s]
+Loss=0.9643388986587524 Batch_id=781 Accuracy=68.96: 100%|████████████████████████████| 782/782 [00:59<00:00, 13.17it/s]
 
-Test set: Average loss: 0.0099, Accuracy: 7772/10000 (77.72%)
+Test set: Average loss: 0.0132, Accuracy: 7181/10000 (71.81%)
 
-Validation accuracy increased (75.670000 --> 77.720000).  Saving model ...
+Validation accuracy increased (69.800000 --> 71.810000).  Saving model ...
 EPOCH: 4
-Loss=0.5462207794189453 Batch_id=781 Accuracy=84.20: 100%|████████████████████████████| 782/782 [01:04<00:00, 12.09it/s]
+Loss=0.4866131842136383 Batch_id=781 Accuracy=72.24: 100%|████████████████████████████| 782/782 [00:59<00:00, 13.15it/s]
 
-Test set: Average loss: 0.0095, Accuracy: 7970/10000 (79.70%)
+Test set: Average loss: 0.0110, Accuracy: 7573/10000 (75.73%)
 
-Validation accuracy increased (77.720000 --> 79.700000).  Saving model ...
+Validation accuracy increased (71.810000 --> 75.730000).  Saving model ...
 EPOCH: 5
-Loss=0.5142868161201477 Batch_id=781 Accuracy=87.20: 100%|████████████████████████████| 782/782 [01:03<00:00, 12.32it/s]
+Loss=0.7358785271644592 Batch_id=781 Accuracy=74.89: 100%|████████████████████████████| 782/782 [01:12<00:00, 10.84it/s]
 
-Test set: Average loss: 0.0093, Accuracy: 8026/10000 (80.26%)
+Test set: Average loss: 0.0100, Accuracy: 7817/10000 (78.17%)
 
-Validation accuracy increased (79.700000 --> 80.260000).  Saving model ...
+Validation accuracy increased (75.730000 --> 78.170000).  Saving model ...
 EPOCH: 6
-Loss=0.18187446892261505 Batch_id=781 Accuracy=89.46: 100%|███████████████████████████| 782/782 [01:02<00:00, 12.42it/s]
+Loss=0.790675699710846 Batch_id=781 Accuracy=76.64: 100%|█████████████████████████████| 782/782 [01:03<00:00, 12.24it/s]
 
-Test set: Average loss: 0.0116, Accuracy: 7742/10000 (77.42%)
+Test set: Average loss: 0.0092, Accuracy: 7990/10000 (79.90%)
 
+Validation accuracy increased (78.170000 --> 79.900000).  Saving model ...
 EPOCH: 7
-Loss=0.6188322901725769 Batch_id=781 Accuracy=91.45: 100%|████████████████████████████| 782/782 [01:03<00:00, 12.37it/s]
+Loss=0.5977678298950195 Batch_id=781 Accuracy=78.74: 100%|████████████████████████████| 782/782 [01:08<00:00, 11.33it/s]
 
-Test set: Average loss: 0.0098, Accuracy: 7997/10000 (79.97%)
+Test set: Average loss: 0.0087, Accuracy: 8117/10000 (81.17%)
 
+Validation accuracy increased (79.900000 --> 81.170000).  Saving model ...
 EPOCH: 8
-Loss=0.5330138206481934 Batch_id=781 Accuracy=93.15: 100%|████████████████████████████| 782/782 [01:00<00:00, 12.97it/s]
+Loss=1.0917431116104126 Batch_id=781 Accuracy=79.67: 100%|████████████████████████████| 782/782 [01:04<00:00, 12.11it/s]
 
-Test set: Average loss: 0.0102, Accuracy: 8051/10000 (80.51%)
+Test set: Average loss: 0.0088, Accuracy: 8099/10000 (80.99%)
 
-Validation accuracy increased (80.260000 --> 80.510000).  Saving model ...
 EPOCH: 9
-Loss=0.19070008397102356 Batch_id=781 Accuracy=94.44: 100%|███████████████████████████| 782/782 [01:02<00:00, 12.58it/s]
+Loss=0.4138323664665222 Batch_id=781 Accuracy=80.88: 100%|████████████████████████████| 782/782 [01:06<00:00, 11.77it/s]
 
-Test set: Average loss: 0.0091, Accuracy: 8217/10000 (82.17%)
+Test set: Average loss: 0.0090, Accuracy: 8059/10000 (80.59%)
 
-Validation accuracy increased (80.510000 --> 82.170000).  Saving model ...
+EPOCH: 10
+Loss=0.5262967944145203 Batch_id=781 Accuracy=81.62: 100%|████████████████████████████| 782/782 [01:00<00:00, 12.99it/s]
+
+Test set: Average loss: 0.0079, Accuracy: 8286/10000 (82.86%)
+
+Validation accuracy increased (81.170000 --> 82.860000).  Saving model ...
+EPOCH: 11
+Loss=0.31577759981155396 Batch_id=781 Accuracy=82.54: 100%|███████████████████████████| 782/782 [01:06<00:00, 11.72it/s]
+
+Test set: Average loss: 0.0082, Accuracy: 8234/10000 (82.34%)
+
+EPOCH: 12
+Loss=0.3268560469150543 Batch_id=781 Accuracy=83.30: 100%|████████████████████████████| 782/782 [01:05<00:00, 12.01it/s]
+
+Test set: Average loss: 0.0075, Accuracy: 8422/10000 (84.22%)
+
+Validation accuracy increased (82.860000 --> 84.220000).  Saving model ...
+EPOCH: 13
+Loss=0.3003961741924286 Batch_id=781 Accuracy=84.17: 100%|████████████████████████████| 782/782 [01:06<00:00, 11.80it/s]
+
+Test set: Average loss: 0.0080, Accuracy: 8326/10000 (83.26%)
+
+EPOCH: 14
+Loss=0.530178427696228 Batch_id=781 Accuracy=84.42: 100%|█████████████████████████████| 782/782 [01:05<00:00, 11.98it/s]
+
+Test set: Average loss: 0.0064, Accuracy: 8597/10000 (85.97%)
+
+Validation accuracy increased (84.220000 --> 85.970000).  Saving model ...
+EPOCH: 15
+Loss=0.7536536455154419 Batch_id=781 Accuracy=85.51: 100%|████████████████████████████| 782/782 [01:07<00:00, 11.58it/s]
+
+Test set: Average loss: 0.0070, Accuracy: 8547/10000 (85.47%)
+
+EPOCH: 16
+Loss=0.34124353528022766 Batch_id=781 Accuracy=85.85: 100%|███████████████████████████| 782/782 [01:04<00:00, 12.05it/s]
+
+Test set: Average loss: 0.0070, Accuracy: 8509/10000 (85.09%)
+
+EPOCH: 17
+Loss=0.4040887653827667 Batch_id=781 Accuracy=86.20: 100%|████████████████████████████| 782/782 [01:06<00:00, 11.69it/s]
+
+Test set: Average loss: 0.0068, Accuracy: 8572/10000 (85.72%)
+
+EPOCH: 18
+Loss=0.7044553756713867 Batch_id=781 Accuracy=86.69: 100%|████████████████████████████| 782/782 [01:06<00:00, 11.70it/s]
+
+Test set: Average loss: 0.0066, Accuracy: 8625/10000 (86.25%)
+
+Validation accuracy increased (85.970000 --> 86.250000).  Saving model ...
+EPOCH: 19
+Loss=0.3292400538921356 Batch_id=781 Accuracy=87.35: 100%|████████████████████████████| 782/782 [01:04<00:00, 12.06it/s]
+
+Test set: Average loss: 0.0061, Accuracy: 8690/10000 (86.90%)
+
+Validation accuracy increased (86.250000 --> 86.900000).  Saving model ...
 Finished Training
 Loading Saved Model
 Loading Completed
-Accuracy on the test images: 81 %
-Accuracy for class plane is: 83.7 %
-Accuracy for class car   is: 91.6 %
-Accuracy for class bird  is: 76.7 %
-Accuracy for class cat   is: 58.9 %
-Accuracy for class deer  is: 79.6 %
-Accuracy for class dog   is: 77.6 %
-Accuracy for class frog  is: 88.2 %
-Accuracy for class horse is: 84.8 %
-Accuracy for class ship  is: 89.6 %
-Accuracy for class truck is: 87.8 %
+Accuracy on the test images: 85 %
+Accuracy for class airplane is: 87.7 %
+Accuracy for class automobile is: 93.4 %
+Accuracy for class bird  is: 78.5 %
+Accuracy for class cat   is: 75.2 %
+Accuracy for class deer  is: 83.3 %
+Accuracy for class dog   is: 74.1 %
+Accuracy for class frog  is: 89.2 %
+Accuracy for class horse is: 92.5 %
+Accuracy for class ship  is: 90.1 %
+Accuracy for class truck is: 92.3 %

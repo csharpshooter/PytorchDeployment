@@ -59,15 +59,18 @@ classes = ['airplane', 'automobile', 'bird', 'cat', 'deer',
            'dog', 'frog', 'horse', 'ship', 'truck']
 
 transform_train = transforms.Compose([
-    transforms.RandomCrop(32),
-    transforms.RandomHorizontalFlip(),
-    transforms.ToTensor(),
-    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
-])
+            transforms.Pad(padding=1, padding_mode="edge"),
+            transforms.RandomHorizontalFlip(),  # randomly flip and rotate
+            transforms.RandomRotation(20),
+            # transforms.RandomErasing(),
+            transforms.RandomCrop(size=(32, 32), padding=4),
+            transforms.ToTensor(),
+            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+        ])
 
 transform_test = transforms.Compose([
     transforms.ToTensor(),
-    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
+    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
 ])
 
 
@@ -219,8 +222,8 @@ def test(model, device, test_loader, class_correct, class_total, epoch, t_acc_ma
     return t_acc, t_acc_max, test_loss
 
 
-optimizer = optim.SGD(net.parameters(), lr=0.01, momentum=0.9)
-epochs = 10
+optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+epochs = 20
 
 for epoch in range(epochs):
     print("EPOCH:", epoch)

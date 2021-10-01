@@ -29,7 +29,7 @@ class TestClass:
                 if row.__len__() > 0 and row[0].__contains__('Test'):
                     assert (float(row[0].split(':')[1]) > 70) == True
 
-    def test_validate_individual_class_accuracy_greater_than_50_pct(self):
+    def test_validate_individual_class_accuracy_greater_than_70_pct(self):
         with open("./train/metrics.csv", 'r') as file:
             csvreader = csv.reader(file)
             header = next(csvreader)
@@ -41,7 +41,7 @@ class TestClass:
                 if row.__len__() > 0 and row[0].__contains__('bird'):
                     assert (float(row[1]) > 70) == True
                 if row.__len__() > 0 and row[0].__contains__('cat'):
-                    assert (float(row[1]) > 50) == True
+                    assert (float(row[1]) > 70) == True
                 if row.__len__() > 0 and row[0].__contains__('deer'):
                     assert (float(row[1]) > 70) == True
                 if row.__len__() > 0 and row[0].__contains__('frog'):
