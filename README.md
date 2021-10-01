@@ -12,7 +12,7 @@ https://pytorch-deploy-test.herokuapp.com/predict
 
 #### Trained model using Kuang-Liu Resnet-18 model on Cifar-10 dataset from scratch for 20 epochs. 
 #### Train Accuracy: 87.352 Test Accuracy: 86.9
-1. Training code, model output and metrics.csv is located in .PytorchDeployment/train. Initialized repo with dvc and tracked changes using dvc.
+1. Training code, [model output](https://github.com/csharpshooter/PytorchDeployment/blob/main/train/model%20train%20output.txt) and [metrics.csv](https://github.com/csharpshooter/PytorchDeployment/blob/main/train/metrics.csv) is located in [train](https://github.com/csharpshooter/PytorchDeployment/tree/main/train) folder. Initialized repo with dvc and tracked changes using dvc.
 2. Achieved more than 70% accuracy on all classes:     
     Accuracy on the test images: 85 %   
     Accuracy for class airplane is: 87.7 %   
@@ -32,6 +32,9 @@ https://pytorch-deploy-test.herokuapp.com/predict
     test_validate_train_accuracy_greater_than_70_pct    
     test_validate_test_accuracy_greater_than_70_pct   
     test_validate_individual_class_accuracy_greater_than_70_pct   
+4. Model training output:
+    [Model Training Output](https://github.com/csharpshooter/PytorchDeployment/blob/main/train/model%20train%20output.txt)
+    
 
 #### Current Status of repository ####
 [![Python application test](https://github.com/csharpshooter/PytorchDeployment/actions/workflows/python-app-tests.yml/badge.svg)](https://github.com/csharpshooter/PytorchDeployment/actions/workflows/python-app-tests.yml)
